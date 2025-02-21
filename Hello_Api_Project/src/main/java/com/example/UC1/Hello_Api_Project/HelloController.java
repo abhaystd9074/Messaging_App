@@ -14,6 +14,11 @@ public class HelloController {
     public String sayHello(@RequestParam(defaultValue = "Mark") String name) {
         return "Hello " + name + " from BridgeLabz!";
     }
+    //uc3 Parameter using path variable
+    @GetMapping("/query/{name}")
+    public String display(@PathVariable String name){
+        return "Hello "+ name+ " from BridgeLabz";
+    }
 
 }
 
